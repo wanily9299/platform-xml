@@ -15,6 +15,10 @@
                         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-    <!-- 设置使用注解的类所在的jar包 -->
-    <context:component-scan base-package="com.zhouwei.platform" />
+
+    <!-- 自动扫描且只扫描@Controller -->
+    <context:component-scan base-package="com.zhouwei.platform" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
 </beans>
