@@ -28,4 +28,9 @@ public class TestController {
     public String loadTestName(String id){
         return testService.selectById(id).getName();
     }
+
+    @RequestMapping("html")
+    public String toTestHtml(){
+        return "test";
+    }
 }
