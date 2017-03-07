@@ -2,6 +2,8 @@ package com.zhouwei.platform.controller.test;
 
 import com.zhouwei.platform.bean.test.Test;
 import com.zhouwei.platform.service.test.TestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("test")
 public class TestController {
+
+    private static Logger log = LoggerFactory.getLogger(TestController.class);
+
     @Autowired
     TestService testService;
 
@@ -31,6 +36,7 @@ public class TestController {
 
     @RequestMapping("html")
     public String toTestHtml(){
+        log.debug("in test html");
         return "test";
     }
 }

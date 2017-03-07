@@ -34,6 +34,7 @@
     <mvc:resources mapping="/css/**" location="/static/css/" />
     <mvc:default-servlet-handler/>
 
+    <mvc:view-controller path="/" view-name="redirect:/test/html" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="order" value="10"></property>
