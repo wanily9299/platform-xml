@@ -31,6 +31,7 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <mvc:resources mapping="/css/**" location="/static/css/" />
     <mvc:default-servlet-handler/>
 
 </beans>
