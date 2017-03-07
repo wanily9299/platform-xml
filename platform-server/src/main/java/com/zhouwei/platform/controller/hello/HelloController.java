@@ -1,4 +1,4 @@
-package com.zhouwei.platform.controller;
+package com.zhouwei.platform.controller.hello;
 
 import com.zhouwei.platform.bean.AppInfo;
 import org.springframework.beans.factory.annotation.Autowired;
